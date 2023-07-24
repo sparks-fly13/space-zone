@@ -1,0 +1,10 @@
+const express = require('express');
+
+const homeRouter = express.Router();
+
+homeRouter.get('/', async (req, res) => {
+
+    res.send('Home');
+});
+
+module.exports = homeRouter;
