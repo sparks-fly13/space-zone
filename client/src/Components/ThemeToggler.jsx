@@ -5,7 +5,7 @@ const ThemeToggler = () => {
     const { colorMode, toggleColorMode } = useColorMode();
 
     return (
-        <Box position="absolute" top="1rem" right="1rem">
+        <Box position="absolute" top="5rem" right="1rem">
             <IconButton
                 aria-label="Toggle dark mode"
                 icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}

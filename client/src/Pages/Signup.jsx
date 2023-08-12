@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FormControl, FormLabel, FormHelperText, Input, Button, Flex, Box, InputGroup, InputRightElement, Link, useToast } from "@chakra-ui/react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import axios from "axios";
-import {useHistory} from 'react-router-dom'
+import {useHistory, Link as ReactRouterLink} from 'react-router-dom';
 
 function Signup() {
     const history = useHistory();
@@ -111,7 +111,7 @@ function Signup() {
                 </Box>
                 <Box>
                     <p>Already have an account?
-                        <Link href="/login" color="teal.500" ml={2}>Login</Link>
+                        <Link as={ReactRouterLink} to="/login" color="teal.500" ml={2}>Login</Link>
                     </p>
                 </Box>
             </Box>

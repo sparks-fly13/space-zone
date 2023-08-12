@@ -31,7 +31,7 @@ function ImageClass() {
                     setFile(e.target.files[0])
                     setImage(URL.createObjectURL(e.target.files[0]))
                     }} />
-                <Image src={image} width="150px" />
+                <Image src={image} width="200px" />
                 <Button onClick={handleSubmit}>Classify</Button>
                 <Button left='8xl' onClick={clearContents}>Clear</Button>
                 {response && <p>Response: {response}</p>}

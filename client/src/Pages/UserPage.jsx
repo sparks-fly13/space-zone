@@ -6,6 +6,7 @@ import { Button, Image, Text, Flex, Box } from "@chakra-ui/react";
 import noPfp from '../assets/zerotwoicon.png';
 import Feedback from "../Components/feedback";
 import ImageClass from "../Components/imageClass";
+import Navbar from "../Components/Navbar";
 
 function UserPage() {
     const history = useHistory();
@@ -15,7 +16,7 @@ function UserPage() {
         e.preventDefault();
         try {
             await axios.get('/logout');
-            history.replace('/signup');
+            history.replace('/');
             window.location.reload();
     } catch(err) {
         console.log(err.response);
@@ -23,6 +24,7 @@ function UserPage() {
 }
     return(
             <div>
+                <Navbar />
                 {!!user ? 
                     <Flex direction="column" align="center" justify="center">
                         <Box textAlign="center" fontSize="xl">
