@@ -10,6 +10,9 @@ const logoutRouter = require('./Routes/logout');
 const googleAuthRouter = require('./Routes/googleAuth');
 const feedbackRouter = require('./Routes/feedback');
 const imgClassRouter = require('./Routes/image-classification');
+const postRouter = require('./apis/post');
+const commentRouter = require('./apis/comment');
+const replyRouter = require('./apis/reply');
 
 const app = express();
 
@@ -21,6 +24,9 @@ app.use(homeRouter);
 app.use(signUpRouter);
 app.use(loginRouter);
 app.use(profileRouter);
+app.use(postRouter);
+app.use(commentRouter);
+app.use(replyRouter);
 app.use(feedbackRouter);
 app.use(imgClassRouter);
 app.use(logoutRouter);

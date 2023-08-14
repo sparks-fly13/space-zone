@@ -25,7 +25,31 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: false,
         default: 'img'
-    }
+    },
+    posts: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Post'
+        }
+    ],
+    comments: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Comment'
+        }
+    ],
+    replies: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Reply'
+        }
+    ],
+    likes: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Post'
+        }
+    ]
 });
 
 userSchema.plugin(findOrCreate);
