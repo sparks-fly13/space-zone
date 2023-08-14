@@ -22,7 +22,7 @@ function Login() {
                 email,
                 password
             });
-                history.push('/profile');
+                history.push('/');
                 window.location.reload();
             return data;
         } catch (err) {

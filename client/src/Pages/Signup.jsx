@@ -37,7 +37,7 @@ function Signup() {
                 firstName,
                 lastName
             });
-                history.push('/profile');
+                history.push('/');
                 window.location.reload();
             return data;
         } catch (err) {
